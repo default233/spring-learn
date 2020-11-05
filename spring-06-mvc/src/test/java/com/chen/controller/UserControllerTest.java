@@ -1,8 +1,7 @@
 package com.chen.controller;
 
-import org.springframework.web.servlet.HandlerInterceptor;
-import org.springframework.web.servlet.HandlerMapping;
-import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * User: JINCHENCHEN
@@ -11,4 +10,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 
 public class UserControllerTest {
 
+    public void test(HttpServletRequest request, HttpServletResponse response) {
+
+    }
 }
