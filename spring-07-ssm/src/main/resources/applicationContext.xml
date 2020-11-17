@@ -4,18 +4,9 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:database.properties"/>
-    <bean id="dataSource" class="org.apache.ibatis.datasource.pooled.PooledDataSource">
-        <property name="driver" value="${mysql.driver}"/>
-        <property name="url" value="${mysql.url}"/>
-        <property name="username" value="${mysql.username}"/>
-        <property name="password" value="${mysql.password}"/>
-    </bean>
+    <import resource="spring-mybatis.xml"/>
 
-    <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
-        <property name="typeAliasesPackage" value="com.chen.pojo"/>
-    </bean>
+    <!--  注解扫描  -->
+    <context:component-scan base-package="com.chen"/>
 
-    <context:component-scan base-package="com.chen.service"/>
 </beans>

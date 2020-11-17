@@ -1,14 +1,5 @@
 <html>
 <body>
-<center>
-    <table>
-        <thead>
-
-        </thead>
-        <tbody>
-
-        </tbody>
-    </table>
-</center>
+Hello, SSM!
 </body>
 </html>
