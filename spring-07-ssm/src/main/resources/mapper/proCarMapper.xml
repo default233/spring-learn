@@ -3,7 +3,18 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.chen.mapper.ProCarMapper">
-    <select id="listAllCar" resultType="ProCar">
+    <resultMap id="car" type="ProCar">
+        <id property="carId" javaType="java.lang.Long"
+            column="CAR_ID_" jdbcType="BIGINT" />
+        <result property="carName" javaType="java.lang.String"
+                column="CAR_NAME_" jdbcType="VARCHAR"/>
+        <result property="description" javaType="java.lang.String"
+                column="DESCRIPTION_" jdbcType="VARCHAR"/>
+        <result property="createTime" javaType="java.util.Date"
+                column="CREATE_TIME_" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="listAllCar" resultType="ProCar" resultMap="car">
         select * from pro_car
     </select>
 </mapper>

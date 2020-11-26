@@ -7,6 +7,8 @@ import com.chen.service.serviceImpl.TestServiceImpl;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * User: JINCHENCHEN
@@ -14,9 +16,21 @@ import java.lang.reflect.Proxy;
  */
 public class Test {
     public static void main(String[] args) {
-        TestService service = new TestServiceImpl();
-        TestService proxy = (TestService) getProxy(service);
-        proxy.doSome();
+//        TestService service = new TestServiceImpl();
+//        TestService proxy = (TestService) getProxy(service);
+//        proxy.doSome();
+//        SimpleDateFormat format = new SimpleDateFormat();
+//        System.out.println(format.format(new Date()));
+        String message = null;
+        switch (message) {
+            case "1" :
+                System.out.println(1); break;
+            case "2" :
+                System.out.println(2); break;
+            default:
+                System.out.println("default");
+        }
+
     }
 
     public static Object getProxy(final Object target) {

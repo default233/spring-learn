@@ -1,6 +1,8 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.chen.pojo.ProCar" %><%--
+<%@ page import="com.chen.pojo.ProCar" %>
+<%--
   Created by IntelliJ IDEA.
   User: JINCHENCHEN
   Date: 2020/11/9
@@ -14,11 +16,8 @@
 </head>
 <body>
 <br>
-<%
-    List<ProCar> cars = (List) request.getAttribute("cars");
-%>
-<c:forEach items="${requestScope.cars}" varStatus="id">
-    ${id.toString()}<br>
+<c:forEach items="${requestScope.cars}" var="car" varStatus="id">
+    ${id.index} : ${car.toString()}<br>
 </c:forEach>
 <br>
 </body>

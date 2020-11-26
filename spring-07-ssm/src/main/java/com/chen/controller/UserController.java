@@ -1,7 +1,8 @@
 package com.chen.controller;
 
 import com.chen.pojo.ProCar;
-import com.chen.service.ProCarService;
+import com.chen.pojo.User;
+import com.chen.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,23 +13,19 @@ import javax.servlet.ServletResponse;
 import java.util.List;
 
 /**
- * User: JINCHENCHEN
- * Date: 2020/11/09
+ * author: JINCHENCHEN
+ * date: 2020/11/26
  */
 @Controller
-@RequestMapping("/car")
-public class ProCarController {
-
+@RequestMapping("/user")
+public class UserController {
     @Autowired
-    private ProCarService proCarService;
+    private UserService userService;
 
     @GetMapping("/list")
-    public String listAllCar(ServletRequest request, ServletResponse response) {
-        List<ProCar> cars = proCarService.listAllCar();
-        for (ProCar car : cars) {
-            System.out.println(car);
-        }
-        request.setAttribute("cars", cars);
-        return "car";
+    public String list(ServletRequest request, ServletResponse response) {
+        List<User> users = userService.list();
+        request.setAttribute("users", users);
+        return "user";
     }
 }

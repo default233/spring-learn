@@ -16,7 +16,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>dispatchServlet</servlet-name>
-    <url-pattern>/*</url-pattern>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
 
   <listener>
@@ -37,7 +37,7 @@
   </filter>
   <filter-mapping>
     <filter-name>encodingFilter</filter-name>
-    <url-pattern>/*</url-pattern>
+    <url-pattern>/</url-pattern>
   </filter-mapping>
 
   <welcome-file-list>
