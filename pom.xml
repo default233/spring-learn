@@ -14,9 +14,10 @@
     <module>spring-03-aop</module>
     <module>spring-04-aop</module>
     <module>spring-05-mvc</module>
-      <module>spring-06-mvc</module>
-      <module>spring-07-ssm</module>
-      <module>test-function</module>
+    <module>spring-06-mvc</module>
+    <module>spring-07-ssm</module>
+    <module>test-function</module>
+    <module>springboot-01-start</module>
   </modules>
   <packaging>pom</packaging>
 
