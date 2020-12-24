@@ -1,0 +1,4 @@
+names: spring-dev
+
+server:
+  port: 19999

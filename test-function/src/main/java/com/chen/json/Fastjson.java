@@ -4,7 +4,9 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 import com.chen.utils.User;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -13,7 +15,7 @@ import java.util.Map;
  */
 public class Fastjson {
     public static void main(String[] args) {
-        mapTest();
+        listTest();
     }
     public static void objectTest() {
         User user = new User(2L, "陈明");
@@ -32,5 +34,15 @@ public class Fastjson {
         System.out.println("mapJson = " + mapJson);
         Map<String, String> mapFromJson = JSON.parseObject(mapJson, Map.class);
         System.out.println("mapFromJson.toString() = " + mapFromJson);
+    }
+
+    public static void listTest() {
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("2");
+        list.add("3");
+        String listJson = JSON.toJSONString(list);
+        System.out.println("listJson = " + listJson);
+
     }
 }

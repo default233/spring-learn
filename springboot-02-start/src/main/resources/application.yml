@@ -1,0 +1,13 @@
+random-num:
+  int-num: ${random.int}
+  value-num: ${random.value}
+  long-num: ${random.long}
+  uuid: ${random.uuid}
+
+
+name: spring
+
+
+spring:
+  profiles:
+    active: dev
