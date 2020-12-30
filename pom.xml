@@ -19,6 +19,7 @@
     <module>test-function</module>
     <module>springboot-01-start</module>
     <module>springboot-02-start</module>
+    <module>spring-08-coding</module>
   </modules>
   <packaging>pom</packaging>
 
